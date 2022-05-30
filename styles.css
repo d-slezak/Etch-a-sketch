@@ -6,6 +6,11 @@
     background-color: gray;
 }
 
+#picker {
+    background-color: red;
+}
+
+
 #board {
     display: flex;
     flex-wrap: wrap;

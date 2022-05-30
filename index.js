@@ -51,6 +51,10 @@ function changeSize() {
     buildBoard();
 }
 
+function pickColor() {
+    
+}
+
 function toggleEraser(){
 
     let eraseToggle = document.querySelector('#eraser');
@@ -71,6 +75,9 @@ function toggleEraser(){
 
 let sizeBtn = document.querySelector('#size');
 sizeBtn.addEventListener('click', changeSize);
+
+let pickerBtn = document.querySelector('#picker');
+pickerBtn.addEventListener('click', pickColor);
 
 let eraserBtn = document.querySelector('#eraser');
 eraserBtn.addEventListener('click',toggleEraser);
