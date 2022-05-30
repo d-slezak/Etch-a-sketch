@@ -51,8 +51,11 @@ function changeSize() {
     buildBoard();
 }
 
-function pickColor() {
-    
+function pickColor(color) {
+    selectedColor = color;
+    squareColor = color;
+
+    document.querySelector('#picker').style.backgroundColor = color;
 }
 
 function toggleEraser(){
@@ -77,7 +80,7 @@ let sizeBtn = document.querySelector('#size');
 sizeBtn.addEventListener('click', changeSize);
 
 let pickerBtn = document.querySelector('#picker');
-pickerBtn.addEventListener('click', pickColor);
+pickerBtn.oninput = (e) => pickColor(e.target.value);
 
 let eraserBtn = document.querySelector('#eraser');
 eraserBtn.addEventListener('click',toggleEraser);
